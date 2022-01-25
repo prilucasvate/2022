@@ -7,7 +7,9 @@ public class a693 {
 		int a=sc.nextInt();
 		int b=sc.nextInt();
 		int c[]=new int [b];
-		for(int q=0;q<b;q++)
+		for(int q=0;q<b;q++) {
+			
+		}
 				
 
 	}
