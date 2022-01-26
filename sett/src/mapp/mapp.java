@@ -18,20 +18,21 @@ public class mapp {
         String user=sc.next();
         System.out.print("±K½X:");
         String pwd=sc.next();
-        if(member.containsKey(user))
-        {
-            if(member.get(user).equals(pwd)) {
-                System.out.println("welcome");
-            System.out.print(member.get(user)+" "+pwd);
-            
-            } else
-                System.out.println("password error");
-                
-        }
-        else
-            System.out.println("account error");
-
-  //      }
+        System.out.println(member.get(user));
+//        if(member.containsKey(user))
+//        {
+//            if(member.get(user).equals(pwd)) {
+//                System.out.println("welcome");
+//            System.out.print(member.get(user)+" "+pwd);
+//            
+//            } else
+//                System.out.println("password error");
+//                
+//        }
+//        else
+//            System.out.println("account error");
+//
+//  //      }
 	}
 
 }
