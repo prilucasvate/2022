@@ -15,12 +15,12 @@ public class d566 {
 		for(int i=0;i<a*2;i++) {
 			aa[i]=sc.next();
 		}
-		for(int i=0;i<a*2;i+=2) {
+		for(int i=a*2-1;i>=0;i-=2) {
 		
-			if(aa[i+1].equals("AC")) {
-				if(hm.containsKey(aa[i])) {
-					if(hm.get(aa[i]).equals("AC")) {
-						continue;
+			if(aa[i].equals("AC")) {
+				if(hm.containsKey(aa[i-1])) {
+					if(hm.get(aa[i-1]).equals("AC")) {
+						//continue;
 					}else {
 						x++;
 					}
@@ -29,16 +29,14 @@ public class d566 {
 					z++;
 				}
 			}
-			hm.put(aa[i], aa[i+1]);
+			hm.put(aa[i-1], aa[i]);
 			
 		}
 //		System.out.println(z);
 //		System.out.println(x);
 		System.out.println(z*100/(x)+"%");
 		//-----------------------
-//		for(int i=0;i<aa.length;i++) {
-//			System.out.println(hm.get(aa[i]));
-//		}
+
 		}
 	}
 
