@@ -10,24 +10,23 @@ public class a417 {
 			int f=sc.nextInt();
 			int co=1;
 			int aa[][]=new int[b][b];
-			//+-+-+-+-+-+-+-+-+-+--++--+-+--++-+-+-+-+-+
-			if(f==1) {
-			//---------------------------------------
+			//+-+-+-+-+-+-+-+-+-+--++--+-+--++-+-+-+-+-+>in
+			if(f==1) {//----------------------------------------------->Clockwise(x,y)
 			if(b%2==0) {//--even
 		for(int x=0;x<b/2;x++) {//****(start,wall,++)
-			for(int i=x;i<b-1-x;i++) {
+			for(int i=x;i<b-1-x;i++) {//---------right(i)¡÷
 				aa[x][i]=co;
 				co++;
 			}
-			for(int j=x;j<b-1-x;j++) {
+			for(int j=x;j<b-1-x;j++) {//---------down(j)¡õ
 				aa[j][b-1-x]=co;
 				co++;
 			}
-			for(int k=x;k<b-1-x;k++) {
+			for(int k=x;k<b-1-x;k++) {//----------left(k)¡ö
 				aa[b-1-x][(b-1-x)-(k-x)]=co;
 				co++;
 			}
-			for(int l=x;l<b-1-x;l++) {
+			for(int l=x;l<b-1-x;l++) {//------------up(l)¡ô
 				aa[(b-1-x)-(l-x)][x]=co;
 				co++;
 			}
@@ -35,7 +34,7 @@ public class a417 {
 			}else {//-odd
 				aa[(b-1)/2][(b-1)/2]=b*b;
 				for(int x=0;x<b/2;x++) {//****(start,wall,++)
-					for(int i=x;i<b-1-x;i++) {
+					for(int i=x;i<b-1-x;i++) {//-------As stated above
 						aa[x][i]=co;
 						co++;
 					}
@@ -53,7 +52,7 @@ public class a417 {
 					}
 				}
 			}
-			//----------------------------------
+			//--------------------------------------------------------->counterclockwise(y,x)
 			}else if(f==2) {
 				if(b%2==0) {//--even
 					for(int x=0;x<b/2;x++) {//****(start,wall,++)
@@ -96,7 +95,7 @@ public class a417 {
 							}
 						}
 			}
-			//+--+--+-+-+-+-+-+-+-++-+-+-+-+--+-+-+-+-+-+-
+			//+--+--+-+-+-+-+-+-+-++-+-+-+-+--+-+-+-+-+-+->out
 			for(int i=1;i<=b;i++) {
 				for(int s=1;s<=b;s++) {
 					System.out.printf("%5d",aa[i-1][s-1]);
